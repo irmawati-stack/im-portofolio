@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio - Siti Irmawati</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --dark: #111827;
+        --text: #4b5563;
+        --light: #f8fafc;
+        --border: #e5e7eb;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--dark);
+        background: var(--white);
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1150px;
+        margin: auto;
+      }
+
+      /* =========================
+           NAVBAR
+        ========================== */
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      nav {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 21px;
+        font-weight: 800;
+        color: var(--dark);
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+
+      .nav-menu a {
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        transition: 0.3s;
+      }
+
+      .nav-menu a:hover {
+        color: var(--primary);
+      }
+
+      .menu-button {
+        display: none;
+        font-size: 26px;
+        cursor: pointer;
+      }
+
+      /* =========================
+           HERO
+        ========================== */
+
+      .hero {
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        background:
+          radial-gradient(circle at 80% 20%, #dbeafe 0, transparent 30%),
+          linear-gradient(180deg, #ffffff, #f8fafc);
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .hero-text small {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(40px, 6vw, 65px);
+        line-height: 1.1;
+        margin: 15px 0;
+        letter-spacing: -2px;
+      }
+
+      .hero-text h1 span {
+        color: var(--primary);
+      }
+
+      .hero-text h2 {
+        font-size: 23px;
+        margin-bottom: 18px;
+        color: #374151;
+      }
+
+      .hero-text p {
+        max-width: 650px;
+        color: var(--text);
+        margin-bottom: 28px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 12px 21px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        border: 1px solid var(--border);
+        background: white;
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+      }
+
+      .profile-photo {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 8px solid white;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      /* =========================
+           GENERAL SECTION
+        ========================== */
+
+      section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        margin-bottom: 50px;
+      }
+
+      .section-title small {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .section-title h2 {
+        font-size: 38px;
+        margin-top: 8px;
+        letter-spacing: -1px;
+      }
+
+      .section-title p {
+        color: var(--text);
+        max-width: 700px;
+        margin-top: 10px;
+      }
+
+      /* =========================
+           ABOUT
+        ========================== */
+
+      .about {
+        background: var(--light);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .about-card {
+        background: white;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+      }
+
+      .about-card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .about-card p {
+        color: var(--text);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 25px;
+      }
+
+      .skill {
+        padding: 8px 14px;
+        background: #eff6ff;
+        color: #1d4ed8;
+        border-radius: 7px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      /* =========================
+           PROJECT
+        ========================== */
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .project-card {
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        overflow: hidden;
+        background: white;
+        transition: 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .project-image {
+        height: 200px;
+        background: linear-gradient(135deg, #dbeafe, #eff6ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 45px;
+      }
+
+      .project-content {
+        padding: 25px;
+      }
+
+      .project-content h3 {
+        margin-bottom: 8px;
+        font-size: 19px;
+      }
+
+      .project-content p {
+        color: var(--text);
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+
+      .project-link {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      /* =========================
+           EDUCATION
+        ========================== */
+
+      .timeline {
+        position: relative;
+        max-width: 800px;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 0 0 35px 35px;
+        border-left: 2px solid #dbeafe;
+      }
+
+      .timeline-item:last-child {
+        border-left: none;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -7px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background: var(--primary);
+        border-radius: 50%;
+      }
+
+      .timeline-item h3 {
+        font-size: 19px;
+      }
+
+      .timeline-item span {
+        font-size: 13px;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .timeline-item p {
+        margin-top: 8px;
+        color: var(--text);
+      }
+
+      /* =========================
+           ACHIEVEMENT
+        ========================== */
+
+      .achievement {
+        background: var(--light);
+      }
+
+      .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .achievement-card {
+        background: white;
+        padding: 30px;
+        border-radius: 13px;
+        border: 1px solid var(--border);
+      }
+
+      .achievement-card .icon {
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+
+      .achievement-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .achievement-card p {
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      /* =========================
+           BLOG
+        ========================== */
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .blog-card {
+        padding: 25px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        transition: 0.3s;
+      }
+
+      .blog-card:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .blog-card span {
+        font-size: 12px;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .blog-card h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .blog-card p {
+        color: var(--text);
+        font-size: 14px;
+      }
+
+      /* =========================
+           CONTACT
+        ========================== */
+
+      .contact {
+        background: #111827;
+        color: white;
+      }
+
+      .contact .section-title p {
+        color: #9ca3af;
+      }
+
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+
+      .contact-info p {
+        color: #d1d5db;
+        margin-bottom: 12px;
+      }
+
+      .contact-info strong {
+        color: white;
+      }
+
+      .contact-links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+      }
+
+      .contact-links a {
+        border: 1px solid #374151;
+        padding: 10px 15px;
+        border-radius: 7px;
+        font-size: 13px;
+        transition: 0.3s;
+      }
+
+      .contact-links a:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+
+      /* =========================
+           FOOTER
+        ========================== */
+
+      footer {
+        background: #0b1120;
+        color: #9ca3af;
+        padding: 25px 0;
+        font-size: 13px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      /* =========================
+           RESPONSIVE
+        ========================== */
+
+      @media (max-width: 900px) {
+        .hero-content,
+        .about-grid,
+        .contact-box {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 70px 0;
+        }
+
+        .hero-image {
+          order: -1;
+        }
+
+        .projects,
+        .achievement-grid,
+        .blog-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 650px) {
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: white;
+          flex-direction: column;
+          padding: 20px;
+          border-bottom: 1px solid var(--border);
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .menu-button {
+          display: block;
+        }
+
+        .projects,
+        .achievement-grid,
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-text h1 {
+          font-size: 42px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        section {
+          padding: 70px 0;
+        }
+
+        .footer-content {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+     NAVBAR
+========================== -->
+
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#home" class="logo"> Siti<span>Irmawati</span> </a>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#achievement">Prestasi</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+
+          <div class="menu-button" onclick="toggleMenu()">☰</div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================
+     HERO
+========================== -->
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <small>Halo Semua 👋</small>
+
+            <h1>Saya <span>Siti Irmawati</span></h1>
+
+            <h2>Pelajar & Calon Developer</h2>
+
+            <p>
+              Saya adalah seorang pelajar yang memiliki ketertarikan terhadap
+              teknologi, pemrograman, desain, dan berbagai hal kreatif. Saya
+              senang belajar hal baru dan membuat sesuatu yang bermanfaat.
+            </p>
+
+            <div class="buttons">
+              <a href="#contact" class="btn btn-primary"> Hubungi Saya </a>
+
+              <!-- GANTI LINK INI DENGAN WEBSITE SEKOLAH -->
+              <a
+                href="https://www.smkn1rongga.sch.id"
+                target="_blank"
+                class="btn btn-outline"
+              >
+                Website Sekolah
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <!-- GANTI FOTO DENGAN FOTO ANDA -->
+            <img
+              src="assets/img/facereveal.jpg"
+              alt="Foto Profil"
+              class="profile-photo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     ABOUT
+========================== -->
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <small>Tentang Saya</small>
+
+          <h2>Kenali Saya Lebih Dekat</h2>
+
+          <p>Sedikit cerita mengenai diri saya sebagai seorang pelajar.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>👨‍🎓 Tentang Saya</h3>
+
+            <p>
+              Halo! Nama saya <strong>Siti irmawati</strong>. Saya merupakan
+              seorang pelajar yang sedang menempuh pendidikan di
+              <strong>SMKN 1 RONGGA</strong>.
+            </p>
+
+            <br />
+
+            <p>
+              Saya memiliki rasa ingin tahu yang tinggi dan senang mencoba
+              berbagai hal baru, khususnya yang berkaitan dengan teknologi dan
+              kreativitas.
+            </p>
+          </div>
+
+          <div>
+            <h3>Hal yang Saya Sukai</h3>
+
+            <p style="color: #4b5563; margin-top: 10px">
+              Beberapa hal yang menjadi minat dan kepribadian saya:
+            </p>
+
+            <div class="skills">
+              <span class="skill">💻 Programming</span>
+              <span class="skill">🎨 Design</span>
+              <span class="skill">📚 Belajar</span>
+              <span class="skill">🎮 Gaming</span>
+              <span class="skill">🎧 Musik</span>
+              <span class="skill">🧵 Merajut</span>
+              <span class="skill">🚀 Teknologi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     PROJECT
+========================== -->
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <small>Portfolio</small>
+
+          <h2>Project Saya</h2>
+
+          <p>Beberapa project yang pernah saya kerjakan selama belajar.</p>
+        </div>
+
+        <div class="projects">
+          <!-- PROJECT 1 -->
+
+          <div class="project-card">
+            <div class="project-image">💻</div>
+
+            <div class="project-content">
+              <h3>Website Portfolio</h3>
+
+              <p>
+                Website portfolio pribadi yang dibuat untuk memperkenalkan diri,
+                kemampuan, dan project saya.
+              </p>
+
+              <a href="#" class="project-link"> Lihat Project → </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 2 -->
+
+          <div class="project-card">
+            <div class="project-image">📚</div>
+
+            <div class="project-content">
+              <h3>Website Sekolah</h3>
+
+              <p>
+                Project website yang berisi informasi mengenai sekolah,
+                kegiatan, dan berbagai informasi pendidikan.
+              </p>
+
+              <a
+                href="https://website-sekolah-anda.sch.id"
+                target="_blank"
+                class="project-link"
+              >
+                Kunjungi Website →
+              </a>
+            </div>
+          </div>
+
+          <!-- PROJECT 3 -->
+
+          <div class="project-card">
+            <div class="project-image">🚀</div>
+
+            <div class="project-content">
+              <h3>Project Pribadi</h3>
+
+              <p>
+                Project eksperimen yang saya buat untuk belajar pemrograman dan
+                mengembangkan kemampuan saya.
+              </p>
+
+              <a href="#" class="project-link"> Lihat Project → </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     EDUCATION
+========================== -->
+
+    <section id="education">
+      <div class="container">
+        <div class="section-title">
+          <small>Pendidikan</small>
+
+          <h2>Riwayat Pendidikan</h2>
+
+          <p>Perjalanan pendidikan saya hingga saat ini.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <span>2025 - 2028</span>
+
+            <h3>SMKN 1 RONGGA</h3>
+
+            <p>
+              Saya sedang menempuh pendidikan di
+              <strong>SMKN 1 RONGGA</strong>. Saya aktif mengikuti kegiatan
+              pembelajaran, organisasi, dan berbagai aktivitas sekolah.
+            </p>
+
+            <br />
+
+            <a
+              href="https://www.smkn1rongga.sch.id"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Kunjungi Website Sekolah
+            </a>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <span>2022 - 2025</span>
+
+            <h3>SMPN 4 GUNUNGHALU</h3>
+
+            <p>
+              Pendidikan sebelumnya yang menjadi bagian dari perjalanan belajar
+              saya.
+            </p>
+
+            <br />
+
+            <a
+              href="https://www.smpn4guha.sch.id"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              Kunjungi Website Sekolah
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     ACHIEVEMENT
+========================== -->
+
+    <section class="achievement" id="achievement">
+      <div class="container">
+        <div class="section-title">
+          <small>Prestasi & Kegiatan</small>
+
+          <h2>Hal yang Pernah Saya Capai</h2>
+
+          <p>
+            Tidak harus selalu berupa juara. Setiap pengalaman adalah bagian
+            dari proses belajar.
+          </p>
+        </div>
+
+        <div class="achievement-grid">
+          <div class="achievement-card">
+            <div class="icon">🏆</div>
+
+            <h3>Prestasi Akademik</h3>
+
+            <p>Tuliskan prestasi akademik yang pernah Anda dapatkan.</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="icon">💻</div>
+
+            <h3>Project Teknologi</h3>
+
+            <p>
+              Pernah membuat website, aplikasi, atau project teknologi lainnya.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="icon">🤝</div>
+
+            <h3>Organisasi</h3>
+
+            <p>
+              Pengalaman mengikuti OSIS, ekstrakurikuler, komunitas, atau
+              organisasi lainnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     BLOG
+========================== -->
+
+    <section id="blog">
+      <div class="container">
+        <div class="section-title">
+          <small>Blog</small>
+
+          <h2>Catatan Saya</h2>
+
+          <p>Tempat untuk berbagi pengalaman dan hal-hal yang saya pelajari.</p>
+        </div>
+
+        <div class="blog-grid">
+          <div class="blog-card">
+            <span>PEMROGRAMAN</span>
+
+            <h3>Perjalanan Saya Belajar Coding</h3>
+
+            <p>
+              Cerita mengenai bagaimana saya mulai mengenal dunia pemrograman.
+            </p>
+          </div>
+
+          <div class="blog-card">
+            <span>PENDIDIKAN</span>
+
+            <h3>Pengalaman Belajar di Sekolah</h3>
+
+            <p>
+              Pengalaman dan hal-hal menarik yang saya dapatkan selama menjadi
+              pelajar.
+            </p>
+          </div>
+
+          <div class="blog-card">
+            <span>TEKNOLOGI</span>
+
+            <h3>Teknologi yang Ingin Saya Pelajari</h3>
+
+            <p>Beberapa teknologi yang ingin saya kuasai di masa depan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     CONTACT
+========================== -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <small>Kontak</small>
+
+          <h2>Hubungi Saya</h2>
+
+          <p>
+            Jika ingin berkenalan, berdiskusi, atau berkolaborasi, silakan
+            hubungi saya.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-info">
+            <p>
+              <strong>Nama</strong><br />
+              Siti Irmawati
+            </p>
+
+            <p>
+              <strong>Sekolah</strong><br />
+              SMKN 1 RONGGA
+            </p>
+
+            <p>
+              <strong>Email</strong><br />
+              sitiirmawati@student.smkn1rongga.sch.id
+            </p>
+
+            <p>
+              <strong>Domisili</strong><br />
+              Jawa Barat, Indonesia
+            </p>
+          </div>
+
+          <div>
+            <h3>Mari Terhubung 👋</h3>
+
+            <p style="color: #9ca3af; margin-top: 10px">
+              Kamu dapat menemukan saya melalui beberapa platform berikut.
+            </p>
+
+            <div class="contact-links">
+              <a href="#" target="_blank"> Instagram </a>
+
+              <a href="#" target="_blank"> GitHub </a>
+
+              <a href="#" target="_blank"> LinkedIn </a>
+
+              <a href="https://www.smkn1rongga.sch.id" target="_blank">
+                Website Sekolah
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     FOOTER
+========================== -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>© 2026 irma. All Rights Reserved.</div>
+
+          <div>Dibuat dengan ❤️ dan semangat belajar.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+
+        navMenu.classList.toggle("active");
+      }
+
+      // Menutup menu setelah memilih navigasi
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("navMenu").classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
